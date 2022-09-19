@@ -10,12 +10,38 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+        <h1>This is my new web page. Insert your info</h1>
+        <img src="cat-breakdancing.gif" alt="cat breakdancing gif">
         <!--No method attribute specified so it is GET by default-->
         <form action="submission.html">
-            <label for="first">First Name</label>
-            <input type="text" id="first" name="first">
-            
-            <input type="submit">
+            <p>
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first"
+                    placeholder="First name only please">
+            </p>
+            <p>
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last"
+                    placeholder="Last name only please">
+            </p>
+            <p>
+                <input type="radio" id="Cool" name="Cool">
+                <label for="Cool">Cool</label>
+            </p>
+            <p>
+                <input type="radio" id="Awesome" name="Awesome">
+                <label for="Awesome">Awesome</label>
+            </p>
+            <p>
+                <input type="radio" id="Weird" name="Weird">
+                <label for="Weird">Weird</label>
+            </p>
+            <p>
+                <label for="area">How does this GIF make you feel</label>
+                <textarea id="area" name = "area" rows="5" placeholder="How do you feel about this GIF">
+                </textarea>
+            </p>
+            <input type="submit" value="Submit Form">
             
         </form>
         
