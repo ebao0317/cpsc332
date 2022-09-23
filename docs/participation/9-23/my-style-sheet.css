@@ -1,0 +1,8 @@
+ul {
+    background-color: chartreuse;
+}
+
+#main-header:hover::after {
+    content: "BOO!";
+    background-color: crimson;
+}
