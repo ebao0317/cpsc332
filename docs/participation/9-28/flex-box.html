@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box Layout</title>
+</head>
+
+<style>
+    #container {
+        display:flex;
+    }
+    nav {
+        background-color:beige;
+    }
+    main {
+        background-color:blue;
+        flex: 0 1 30%        
+    }
+    section {
+        background-color: brown;
+        flex: 0 1 70%
+    }
+    div {
+        line-height:200px;
+    }
+</style>
+
+
+
+<body>
+    <nav>Navigation</nav>
+    <div id="container">
+        <main>
+            <img src="" alt="">
+            <p>This is a paragraph</p>
+        </main>
+        <section>Section</section>
+    </div>
+</body>
