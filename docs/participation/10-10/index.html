@@ -91,6 +91,17 @@
 
             let dateTimeNow = new Date();
             console.log(dateTimeNow);
+
+            var currentDate = {
+                dateTime: null,
+
+            }
+
+            document.getElementById("update-date").addEventListener("click", pizzaTime);
+
+            function pizzaTime() {
+                console.log("Is it Pizza Time???");
+            }
         }
     </script>
 </head>
@@ -104,7 +115,7 @@
         </p>
 
         <p>
-            <button>Click to see current date time!</button>
+            <button id="update-date">Click to see current date time!</button>
         </p>
     </div>
     <img src="cat-breakdancing.gif" alt="Cat breakdancing">
