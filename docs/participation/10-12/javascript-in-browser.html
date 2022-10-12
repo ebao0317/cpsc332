@@ -30,8 +30,27 @@
             var allDivs = document.querySelectorAll("body div");
             var firstDiv = document.querySelector("body div");
 
-            document.getElementById("").addEventListener("", startClock);
+            document.getElementById("date-button-start").addEventListener("click", startClock);
+            document.getElementById("date-button-stop").addEventListener("click", stopClock);
+            var clock = null;
 
+            function startClock() {
+                console.log("start clock");
+                clock = setInterval(updateClock, 1000);
+            }
+
+            function updateClock() {
+                console.log("I'm a clock");
+                let currDate = new Date();
+                document.getElementById("date-span").innerHTML = currDate;
+                // document.getElementById("date-span").innerHTML = clock;
+
+            }
+
+            function stopClock() {
+                console.log("stop clock")
+                clearInterval(clock);
+            }
         }//end of onload function
     </script>
 </head>
