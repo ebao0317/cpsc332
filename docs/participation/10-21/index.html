@@ -42,7 +42,10 @@
             let save1 = document.getElementById("save1");
             let save2 = document.getElementById("save2");
             let save3 = document.getElementById("save3");
-
+            let submitButton = document.getElementById("submitButton")
+            var flag1 = false;
+            var flag2 = false;
+            var flag3 = false;
 
             save1.addEventListener("click", () => {
                 if(input1.value == null || input1.value == "") {
@@ -51,6 +54,10 @@
                 else {
                     localStorage.setItem("input1", input1.value);
                     input1.style.color = "green";
+                    flag1 = true;
+                    if(flag1 == true && flag2 == true && flag3 == true) {
+                        submitButton.disabled = false;
+                    }
                 }
             });
             save2.addEventListener("click", () => {
@@ -60,6 +67,10 @@
                 else {
                     localStorage.setItem("input2", input2.value);
                     input2.style.color = "green";
+                    flag2 = true;
+                    if(flag1 == true && flag2 == true && flag3 == true) {
+                        submitButton.disabled = false;
+                    }
                 }        
             });
             save3.addEventListener("click", () => {
@@ -69,8 +80,14 @@
                 else {
                     localStorage.setItem("input3", input3.value);
                     input3.style.color = "green";
+                    flag3 = true;
+                    if(flag1 == true && flag2 == true && flag3 == true) {
+                        submitButton.disabled = false;
+                    }
                 }        
             });
+
+
         }
 
     </script>
@@ -91,7 +108,7 @@
             <input type="text" name="input3" id="input3">
             <button type="button" id="save3">Save Data</button>
             <br>
-            <input type="submit" value="Submit Response">
+            <input id="submitButton" type="submit" value="Submit Response" disabled>
         </form>
     </div>
     <a href="../../index.html">Back to participation index</a>
