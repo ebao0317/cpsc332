@@ -34,19 +34,44 @@
     </style>
 
     <script>
-        let input1 = document.getElementById("input1");
-        let input2 = document.getElementById("input2");
-        let input3 = document.getElementById("input3");
+        window.addEventListener("DOMContentLoaded", domLoaded);
+        function domLoaded(){
+            let input1 = document.getElementById("input1");
+            let input2 = document.getElementById("input2");
+            let input3 = document.getElementById("input3");
+            let save1 = document.getElementById("save1");
+            let save2 = document.getElementById("save2");
+            let save3 = document.getElementById("save3");
 
-        document.getElementById("save1").addEventListener("click", () => {
-            localStorage.setItem("input1", input1.value);
-        });
-        document.getElementById("save2").addEventListener("click", () => {
-            localStorage.setItem("input2", input2.value);
-        });
-        document.getElementById("save3").addEventListener("click", () => {
-            localStorage.setItem("input3", input3.value);
-        });
+
+            save1.addEventListener("click", () => {
+                if(input1.value == null || input1.value == "") {
+                    alert("Please fill in input 1");
+                }
+                else {
+                    localStorage.setItem("input1", input1.value);
+                    input1.style.color = "green";
+                }
+            });
+            save2.addEventListener("click", () => {
+                if(input1.value == null || input2.value == "") {
+                    alert("Please fill in input 2");
+                }
+                else {
+                    localStorage.setItem("input2", input2.value);
+                    input2.style.color = "green";
+                }        
+            });
+            save3.addEventListener("click", () => {
+                if(input1.value == null || input3.value == "") {
+                    alert("Please fill in input 3");
+                }
+                else {
+                    localStorage.setItem("input3", input3.value);
+                    input3.style.color = "green";
+                }        
+            });
+        }
 
     </script>
 </head>
@@ -55,16 +80,16 @@
         <div id="mainLabel" class="mainLabel">CPSC 332 10/21 Participation</div>
         <form id="subForm" class="subForm" method="POST" action="submission.html">
             <label for="input1">Label 1:</label>
-            <input type="text" name="input1">
-            <button id="save1">Save Data</button>
+            <input type="text" name="input1" id="input1">
+            <button type="button" id="save1">Save Data</button>
             <br>
             <label for="input2">Label 2:</label>
-            <input type="text" name="input2">
-            <button id="save2">Save Data</button>
+            <input type="text" name="input2" id="input2">
+            <button type="button" id="save2">Save Data</button>
             <br>
             <label for="input3">Label 3:</label>
-            <input type="text" name="input3">
-            <button id="save3">Save Data</button>
+            <input type="text" name="input3" id="input3">
+            <button type="button" id="save3">Save Data</button>
             <br>
             <input type="submit" value="Submit Response">
         </form>
