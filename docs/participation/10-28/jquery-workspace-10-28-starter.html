@@ -85,8 +85,19 @@
             //1. Center the button created in this lecture using the property-value pair CSS method 1 demonstrated during lecture.
             //2. Apply a background color, border, padding, and margin (your choice) to the ordered list using the object literal method demonstrated during lecture
             //3. Add an event listener to the ordered list list items so the color changes as you hover over each individual list item (color is your choice).
-
+            $("ol").css({
+                backgroundColor: "red",
+                border: "5px dotted blue",
+                padding: "5px",
+                margin: "3px"
+            });
+            $("li").on("hover", function() {
+                $("li").css("text-color:", "brown");
+            });
             $("div").attr("class", "draggable ui-widget-content");
+            $(function() {
+                $(".draggable").draggable();
+            });
         }); //end of ready function 
     </script>
 
